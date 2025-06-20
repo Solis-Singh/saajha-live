@@ -30,7 +30,7 @@ export const AuthProvider = ({ children }) => {
             axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
             
             // Get user data
-            const response = await axios.get('http://localhost:5000/api/auth/me');
+            const response = await axios.get('https://saajha-backend-0xvm.onrender.com/api/auth/me');
             setUser(response.data.user);
           }
         }
@@ -55,7 +55,7 @@ export const AuthProvider = ({ children }) => {
       console.log('Attempting to register user:', userData.email);
       
       // Use the direct registration endpoint
-      const response = await axios.post('http://localhost:5000/api/register-direct', userData, {
+      const response = await axios.post('https://saajha-backend-0xvm.onrender.com/api/register-direct', userData, {
         timeout: 30000 // Increase timeout to 30 seconds
       });
       
@@ -86,7 +86,7 @@ export const AuthProvider = ({ children }) => {
       setLoading(true);
       setError(null);
       
-      const response = await axios.post('http://localhost:5000/api/auth/login', {
+      const response = await axios.post('https://saajha-backend-0xvm.onrender.com/api/auth/login', {
         email,
         password
       });
@@ -126,7 +126,7 @@ export const AuthProvider = ({ children }) => {
       setLoading(true);
       setError(null);
       
-      const response = await axios.put('http://localhost:5000/api/auth/updateprofile', userData);
+      const response = await axios.put('https://saajha-backend-0xvm.onrender.com/api/auth/updateprofile', userData);
       
       setUser(response.data.user);
       return response.data.user;
