@@ -11,7 +11,7 @@ const {
 const { protect } = require('../middleware/auth');
 
 // Public routes
-router.get('https://saajha-frontend.onrender.com/', getProducts);
+router.get('/', getProducts);
 router.get('/:id', getProduct);
 
 // Protected routes
