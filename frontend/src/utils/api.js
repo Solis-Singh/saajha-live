@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'https://saajhalive.vercel.app';
+const API_URL = 'https://saajha-backend-0xvm.onrender.com/api';
 
 // Create axios instance with default config
 const api = axios.create({
