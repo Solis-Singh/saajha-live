@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'https://saajhalive.vercel.app/api';
+const API_URL = 'https://saajhalive.vercel.app';
 
 // Create axios instance with default config
 const api = axios.create({
